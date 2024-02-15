@@ -26,10 +26,10 @@
                 uses: actions/setup-node@v3
                 with:
                   node-version: ${{ matrix.node-version }}
+
               - name: Install MongoDB
                 uses: supercharge/mongodb-github-action@1.6.0
-                with:
-                  mongodb-version: '7.2.0'
+
               - run: npm i
               - run: npm run dev &
               - run: npm test
